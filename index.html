@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lola Schmitt - Accueil</title>
+  <title>Portfolio - Lola Schmitt</title>
+
+  <!-- CSS global -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Police spéciale pour le titre -->
+  <link href="https://fonts.googleapis.com/css2?family=Gulfs+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-  <h1>Lola Schmitt</h1>
+  <h1 class="portfolio-title">Portfolio de Lola Schmitt</h1>
   <nav>
     <a href="index.html" class="active">Accueil</a>
     <a href="projets.html">Projets</a>
@@ -19,32 +27,39 @@
   </nav>
 </header>
 
+<!-- Section Accueil -->
 <section class="intro">
-  <img src="images/photo_profil.png" alt="Photo de Lola Schmitt" class="photo-profil">
+  <img src="images/lola.jpeg" alt="Photo de Lola Schmitt" class="photo-profil">
   <div class="intro-text">
-    <h2>Bienvenue sur mon portfolio</h2>
-    <p>Je suis <strong>Lola Schmitt</strong>, développeuse web passionnée par la création de projets modernes et créatifs.</p>
+    <h2>Bienvenue sur mon site <i class="bi bi-emoji-smile"></i></h2>
+    <p>Je m'appelle <strong>Lola Schmitt</strong>, j'aime créer, découvrir et coopérer.</p>
   </div>
 </section>
 
+<!-- Section Compétences Principales -->
 <section id="competences-principales">
-  <h2>Compétences principales</h2>
+  <h2>Mes compétences principales</h2>
   <div class="skills-grid">
-    <div class="skill-card">HTML</div>
-    <div class="skill-card">CSS</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">PHP</div>
-    <div class="skill-card">React</div>
+    <div class="skill-card skill-color1">HTML</div>
+    <div class="skill-card skill-color2">CSS</div>
+    <div class="skill-card skill-color3">JavaScript</div>
+    <div class="skill-card skill-color1">PHP</div>
+    <div class="skill-card skill-color2">React</div>
+    <div class="skill-card skill-color3">Figma</div>
   </div>
   <a href="competences.html" class="btn">Voir plus →</a>
 </section>
 
+<!-- Section CV -->
 <section id="cv-telechargeable">
   <h2>Mon CV</h2>
-  <a href="CV_Lola_Schmitt.pdf" download class="btn">Télécharger le CV</a>
-  <img src="images/cv_apercu.png" alt="Aperçu du CV" class="cv-image">
+  <a href="cv.html" class="btn">Voir mon CV</a>
+  <div class="cv-download">
+    <a href="CV_Lola_Schmitt.pdf" download class="btn">Télécharger</a>
+  </div>
 </section>
 
+<!-- Section Projets -->
 <section id="nouveaux-projets">
   <h2>Mes projets récents</h2>
   <div class="projects">
