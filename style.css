@@ -44,6 +44,48 @@ section {
   padding: 0 20px;
 }
 
+.tags {
+  margin-top: 10px;
+}
+
+.tags span {
+  display: inline-block;
+  background: #e8f4fa;
+  color: #287087;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: #287087;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #1d5566;
+}
+
 .projects {
   display: flex;
   flex-wrap: wrap;
