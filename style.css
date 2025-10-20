@@ -137,12 +137,6 @@ nav a.active { text-decoration:underline; }
   padding: 40px 0;
 }
 
-#nouveaux-projets h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #333;
-}
-
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -302,7 +296,7 @@ nav a.active { text-decoration:underline; }
 .btn-more {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #60953d; /* vert */
+  background-color: #934fa3; 
   color: #fff;
   border-radius: 25px;
   text-decoration: none;
@@ -311,18 +305,67 @@ nav a.active { text-decoration:underline; }
 }
 
 .btn-more:hover {
-  background-color: #4a7b30;
+  background-color: #75307b;
   transform: scale(1.05);
 }
 
-/* Footer */
-footer {
-  background:#7db9d1;
-  color:white;
-  text-align:center;
-  padding:15px;
-  margin-top:40px;
+/* Conteneur des blocs */
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em; /* plus grand que le texte normal */
+    margin-bottom: 40px; /* espace en dessous */
+    color: #333; /* ou une couleur qui s'accorde avec ton site */
+    font-family: 'Gulfs Display', sans-serif; /* si tu veux la même police que tes titres */
 }
+
+.competence-block {
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Logos : aucun fond, juste taille et centrage */
+.skill-logo {
+    width: 70px;
+    height: auto;
+}
+
+/* Compétences sans logo : bloc coloré */
+.color-card {
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    border-radius: 12px;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+
+
+/*FOOTER*/
+footer {
+    background-color: #7db9d1; /* Couleur de fond sombre */
+    color: #fff;            /* Texte blanc */
+    text-align: center;     /* Centré */
+    padding: 15px 0;        /* Espacement haut/bas */
+    font-size: 0.9em;       /* Taille du texte légèrement plus petite */
+    font-family: 'Gulfs Display', sans-serif; /* Police pour être cohérent avec ton titre */
+}
+
+footer p {
+    margin: 0; /* Supprime les marges par défaut */
+}
+
 
 /* Responsive */
 @media(max-width:900px) {
