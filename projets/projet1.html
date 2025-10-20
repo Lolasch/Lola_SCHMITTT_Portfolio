@@ -1,38 +1,164 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site de Couture - Lola Schmitt</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>Projet - Site Web Accessible | Lola Schmitt</title>
+
+  <link rel="stylesheet" href="/projet.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gulfs+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Grille images d'illustration 3 par 3 */
+    .illustrations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .illustrations-grid img {
+      width: 100%;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .illustrations-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Lola Schmitt</h1>
-  <nav>
-    <a href="../index.html">Accueil</a>
-    <a href="../projets.html" class="active">Projets</a>
-    <a href="../competences.html">Compétences</a>
-    <a href="../cv.html">CV</a>
-    <a href="../contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1 class="portfolio-title">Portfolio de Lola Schmitt</h1>
+    <nav>
+      <a href="/index.html">Accueil</a>
+      <a href="/projets.html" class="active">Projets</a>
+    </nav>
+  </header>
 
-<section class="projet-detail">
-  <h2>Site de Couture</h2>
-  <div class="tags"><span>HTML</span><span>CSS</span><span>PHP</span></div>
-  <p>Création d’un site web pour une association de couture locale. Le site permet de présenter les activités, publier les ateliers à venir et partager des créations de membres.</p>
+  <!-- Section Projet -->
+  <section class="project-detail" style="padding:50px 20px;">
 
-  <img src="../images/projet1.png" alt="Site de Couture">
-  <img src="../images/projet1_detail.png" alt="Détail du site">
+    <h2 class="section-title" style="margin-bottom:50px;">Site Web Accessible</h2>
 
-  <a href="../projets.html" class="btn">← Retour aux projets</a>
-</section>
+    <!-- Résumé du projet -->
+    <div class="project-section">
+      <h3>Résumé du projet</h3>
+      <p class="project-summary">
+        Projet visant à rendre un site web 100% accessible aux personnes en situation de handicap,
+        respectant les normes WCAG et offrant une expérience utilisateur optimale.
+      </p>
+    </div>
 
-<footer>
-  <p>© 2025 Lola Schmitt</p>
-</footer>
+    <!-- Image principale -->
+    <div class="project-section">
+      <img src="/images/projets/site_accessible.png" alt="Site web accessible" class="project-detail-img">
+    </div>
+
+    <!-- Étapes et compétences -->
+    <div class="project-section">
+      <h3>Étapes et compétences mises en œuvre</h3>
+      <p>
+        Réflexion et recherches sur les normes qu'il faut utiliser, polices, scripts, code, etc.
+      </p>
+    </div>
+
+    <!-- Fonctionnalités principales -->
+    <div class="project-section">
+      <h3>Fonctionnalités principales</h3>
+      <p class="project-features">
+        - Navigation optimisée pour lecteurs d’écran <br>
+        - Respect des normes WCAG <br>
+        - Contrastes et couleurs accessibles <br>
+        - Navigation au clavier <br>
+        - Formulaires complexes accessibles <br>
+        - Tests et validation d’accessibilité, tableau complexe accessible
+      </p>
+    </div>
+
+    <!-- Compétences mises en œuvre -->
+    <div class="project-section">
+      <h3>Compétences mises en œuvre</h3>
+      <div class="skills-blocks">
+        <div class="skill-block">HTML</div>
+        <div class="skill-block">CSS</div>
+        <div class="skill-block">Accessibilité</div>
+        <div class="skill-block">WCAG</div>
+        <div class="skill-block">Navigation clavier</div>
+        <div class="skill-block">Tests d'accessibilité</div>
+        <div class="skill-block">Grid d'audit</div>
+      </div>
+    </div>
+
+    <!-- Images d'illustrations -->
+    <div class="project-section">
+      <h3>Images d'illustrations</h3>
+      <div class="illustrations-grid">
+        <img src="/images/projet1/contact.png" alt="Illustration 1">
+        <img src="/images/projet1/contact2.png" alt="Illustration 2">
+        <img src="/images/projet1/mentionslegales.png" alt="Illustration 3">
+        <!-- ajoute d'autres images ici si besoin -->
+      </div>
+    </div>
+
+    <!-- Bouton retour -->
+    <div style="text-align:center; margin-top:20px;">
+      <a href="projets.html" class="btn-small"><i class="bi bi-arrow-left"></i> Retour aux projets</a>
+    </div>
+
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" style="
+      display: none;
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+  ">
+    <img id="lightbox-img" src="" alt="Agrandir l'image" style="
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    ">
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Lola Schmitt. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    // On cible toutes les images zoomables (principale + illustrations)
+    document.querySelectorAll('.project-detail-img, .illustrations-grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    // Fermer la lightbox au clic sur le fond
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+  </script>
 
 </body>
+
 </html>
