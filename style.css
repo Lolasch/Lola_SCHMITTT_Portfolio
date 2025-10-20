@@ -159,11 +159,6 @@ nav a.active { text-decoration:underline; }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
 .project-card img {
   width: 100%;
   height: 130px;
@@ -258,8 +253,8 @@ nav a.active { text-decoration:underline; }
 
 .tags span {
   display: inline-block;
-  background-color: #d0e6ff; /* bleu clair */
-  color: #357edd; /* texte bleu */
+  background-color: #ffd0fd; /* bleu clair */
+  color: #000000; /* texte bleu */
   border-radius: 12px;
   padding: 3px 8px;
   font-size: 0.75rem;
@@ -272,7 +267,7 @@ nav a.active { text-decoration:underline; }
 .btn-small {
   display: inline-block;
   padding: 6px 14px;
-  background-color: #357edd;
+  background-color: #b11c8e;
   color: white;
   text-decoration: none;
   border-radius: 20px;
@@ -282,7 +277,7 @@ nav a.active { text-decoration:underline; }
 }
 
 .btn-small:hover {
-  background-color: #2565b4;
+  background-color: #b42590;
   transform: scale(1.05);
 }
 
@@ -341,7 +336,7 @@ nav a.active { text-decoration:underline; }
 
 /* Compétences sans logo : bloc coloré */
 .color-card {
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(34, 30, 30, 0.3);
     color: white;
     border-radius: 12px;
     padding: 8px 12px;
