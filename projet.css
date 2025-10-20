@@ -319,6 +319,40 @@ nav a.active {
     cursor: zoom-out;
 }
 
+/* ---------------- Blocs pour fonctionnalités ---------------- */
+.features-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.feature-block {
+    background-color: #e2d1f8; /* rose pastel */
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 200px;
+    flex: 1 1 auto;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.feature-block:hover {
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 footer {
     background-color: #7db9d1;
