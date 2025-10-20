@@ -129,40 +129,190 @@ nav a.active { text-decoration:underline; }
 
 .skill-card:hover { transform:scale(1.05); }
 
-/* Projets */
-.projects {
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  justify-content:center;
-  margin-top:20px;
+/* ------------------------------
+   Section Projets
+--------------------------------*/
+#nouveaux-projets {
+  text-align: center;
+  padding: 40px 0;
 }
 
+#nouveaux-projets h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ------------------------------
+   Carte projet
+--------------------------------*/
 .project-card {
-  background:#f7f7f7;
-  padding:20px;
-  flex:1 1 calc(30% - 20px);
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 90%;
+  max-width: 350px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {
-  width:100%;
-  border-radius:10px;
-  margin-bottom:10px;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.tags { margin-top:10px; }
+.project-card h3 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #222;
+}
+
+/* ------------------------------
+   Description avec effet dégradé
+--------------------------------*/
+.project-desc {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #333;
+  max-height: 115px; /* hauteur visible avant clic */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.4s ease;
+  margin-bottom: 8px;
+}
+
+.project-desc strong {
+  display: inline-block;
+  margin-top: 6px; /* espace léger avant “Fonctionnalités principales” */
+}
+
+/* Dégradé blanc en bas */
+.project-desc::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 90%);
+  transition: opacity 0.3s ease;
+}
+
+/* Après clic sur “Voir plus” */
+.project-desc.expanded {
+  max-height: 2000px; /* tout afficher */
+}
+
+.project-desc.expanded::after {
+  opacity: 0; /* disparition dégradé */
+}
+
+/* ------------------------------
+   Bouton Voir plus (vert)
+--------------------------------*/
+.see-more {
+  background: none;
+  border: none;
+  color: #60953d;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-bottom: 14px; /* espace avec les compétences */
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.see-more:hover {
+  color: #4a7b30;
+}
+
+.see-more i {
+  transition: transform 0.3s ease;
+}
+
+.see-more.active i {
+  transform: rotate(90deg);
+}
+
+/* ------------------------------
+   Tags compétences (bleu clair)
+--------------------------------*/
+.tags {
+  margin-bottom: 12px; /* espace entre tags et bouton projet */
+}
 
 .tags span {
-  display:inline-block;
-  background:#e8f4fa;
-  color:#287087;
-  padding:5px 10px;
-  margin:3px;
-  border-radius:8px;
-  font-size:0.8em;
+  display: inline-block;
+  background-color: #d0e6ff; /* bleu clair */
+  color: #357edd; /* texte bleu */
+  border-radius: 12px;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  margin: 2px;
+}
+
+/* ------------------------------
+   Bouton Voir le projet (bleu)
+--------------------------------*/
+.btn-small {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #357edd;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-small:hover {
+  background-color: #2565b4;
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   Voir plus de projets
+--------------------------------*/
+.more-projects {
+  margin-top: 20px; /* un peu plus proche des projets */
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #60953d; /* vert */
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-more:hover {
+  background-color: #4a7b30;
+  transform: scale(1.05);
 }
 
 /* Footer */
