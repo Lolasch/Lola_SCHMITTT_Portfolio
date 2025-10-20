@@ -1,56 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projets - Lola Schmitt</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="projet.css">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Police -->
+  <link href="https://fonts.googleapis.com/css2?family=Gulfs+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-  <h1>Lola Schmitt</h1>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="projets.html" class="active">Projets</a>
-    <a href="competences.html">Compétences</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1 class="portfolio-title">Portfolio de Lola Schmitt</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="projets.html" class="active">Projets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<section>
-  <h2>Tous mes projets</h2>
-  <div class="projects">
-    <div class="project-card">
-      <img src="images/projet1.png" alt="Projet 1">
-      <h3>Site de Couture</h3>
-      <p>Création d’un site pour une association locale.</p>
-      <div class="tags"><span>HTML</span><span>CSS</span><span>PHP</span></div>
-      <a href="projets/projet1.html" class="btn-small">Voir le projet</a>
+  <!-- Section Projets -->
+  <section id="nouveaux-projets">
+    <h2 class="section-title projets-title">Mes projets récents</h2>
+    <div class="projects">
+
+      <!-- Projet 1 -->
+      <div class="project-card">
+        <img src="images/projets/site_accessible.png" alt="Site web accessible">
+        <h3>Site web accessible</h3>
+        <p class="project-desc">
+          Site web conçu pour être 100% accessible aux personnes en situation de handicap.
+          <br>
+          <strong style="color: #b4258e;">Fonctionnalités principales :</strong>
+          <br>Navigation optimisée pour lecteurs d’écran, Respect des normes WCAG,
+          Utilisation de contrastes adaptés, Navigation clavier, Formulaires accessibles, Tests
+          d’accessibilité.
+        </p>
+        <button class="see-more">
+          Voir la suite du texte <i class="bi bi-arrow-right"></i>
+        </button>
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Accessibilité</span>
+          <span>WCAG</span>
+        </div>
+        <a href="projets/projet1.html" class="btn-small">Voir le projet</a>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="project-card">
+        <img src="images/projets/site_couture.png" alt="Site de Couture">
+        <h3>Site de Couture</h3>
+        <p class="project-desc">
+          Développement d’un site web avec Symfony permettant la réservation d’objets dans le domaine de la
+          couture.
+          <br>
+          <strong style="color: #b4258e;">Fonctionnalités principales :</strong>
+          <br>Navigation par catégories, affichage des objets (vignettes et détail),
+          réservation pour utilisateurs connectés, interface d’administration, gestion des rôles et
+          sécurisation.
+        </p>
+        <button class="see-more">
+          Voir la suite du texte <i class="bi bi-arrow-right"></i>
+        </button>
+        <div class="tags">
+          <span>Symfony</span>
+          <span>PHP</span>
+          <span>Twig</span>
+          <span>SQL</span>
+        </div>
+        <a href="projets/projet_couture.html" class="btn-small">Voir le projet</a>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="project-card">
+        <img src="images/projets/site_hikemap.png" alt="HikesMap - site interactif">
+        <h3>HikesMap - Site interactif</h3>
+        <p class="project-desc">
+          Site web interactif dédié aux randonnées en Alsace.
+          <br>
+          <strong style="color: #b4258e;">Fonctionnalités principales :</strong>
+          <br>Création et gestion de randonnées, forum de discussion, rôles (admin, utilisateur, visiteur),
+          carte interactive, système de notation et interface responsive.
+        </p>
+        <button class="see-more">
+          Voir la suite du texte <i class="bi bi-arrow-right"></i>
+        </button>
+        <div class="tags">
+          <span>Git</span>
+          <span>Symfony</span>
+          <span>Bootstrap</span>
+          <span>Trello</span>
+          <span>Miro</span>
+          <span>SQL</span>
+        </div>
+        <a href="projets/projet_hikesmap.html" class="btn-small">Voir le projet</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="project-card">
-      <img src="images/projet2.png" alt="Projet 2">
-      <h3>Bureau 3D</h3>
-      <p>Modélisation 3D d’un espace de travail.</p>
-      <div class="tags"><span>Blender</span><span>3D</span><span>Design</span></div>
-      <a href="projets/projet2.html" class="btn-small">Voir le projet</a>
-    </div>
 
-    <div class="project-card">
-      <img src="images/projet3.png" alt="Projet 3">
-      <h3>Montagne des Singes</h3>
-      <p>Création d’une peluche mascotte pour le parc.</p>
-      <div class="tags"><span>Illustrator</span><span>Design</span></div>
-      <a href="projets/projet3.html" class="btn-small">Voir le projet</a>
-    </div>
-  </div>
-</section>
+  <script>
+    const buttons = document.querySelectorAll('.see-more');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const desc = btn.previousElementSibling;
+        desc.classList.toggle('expanded');
+        btn.classList.toggle('active');
+        btn.innerHTML = desc.classList.contains('expanded')
+          ? 'Voir moins <i class="bi bi-arrow-right"></i>'
+          : 'Voir la suite du texte <i class="bi bi-arrow-right"></i>';
+      });
+    });
+  </script>
 
-<footer>
-  <p>© 2025 Lola Schmitt</p>
-</footer>
+  <footer>
+    <p>© <span id="year"></span> Lola Schmitt. Tous droits réservés.</p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 
 </body>
+
 </html>
