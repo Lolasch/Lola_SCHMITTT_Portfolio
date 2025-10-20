@@ -31,18 +31,74 @@
 
     <!-- Section Accueil -->
     <section class="intro">
-        <h2>Bienvenue sur mon portfolio <i class="bi bi-heart-fill"></i></h2>
+        <h2>Bienvenue sur mon portfolio</h2>
         <div class="intro-content">
             <img src="images/lola.jpeg" alt="Photo de Lola Schmitt" class="photo-profil">
             <div class="intro-text">
-                <p>Je m'appelle <strong>Lola Schmitt</strong>, j'aime créer, découvrir et coopérer.</p>
+                <p>Je m'appelle <strong style="color:#aa5aa5;">Lola Schmitt</strong>, étudiante en 3ᵉ année de BUT MMI
+                    (Métiers du Multimédia
+                    et de l’Internet),
+                    spécialité <strong style="color:#aa5aa5;">développement web et dispositifs interactifs</strong>.</p>
+
+                <p>J’aime le code, apprendre et surtout <strong style="color:#aa5aa5;">créer</strong>. Ce que je
+                    préfère, c’est le
+                    <strong style="color:#aa5aa5;">front-end</strong>,
+                    mais je possède aussi de solides compétences en <strong style="color:#aa5aa5;">back-end</strong>.
+                </p>
+
+                <p>Au fil de mes projets, j’ai appris à gérer un site de <strong style="color:#aa5aa5;">A à Z</strong>,
+                    à collaborer
+                    efficacement et à trouver des solutions créatives.
+                    Je m’investis pleinement dans chaque projet, car la <strong>résolution de problèmes</strong> est une
+                    véritable source de satisfaction pour moi.</p>
+
+                <p>Je m’intéresse également à <strong style="color:#aa5aa5;">l’accessibilité web</strong>, un domaine
+                    devenu essentiel et
+                    désormais <strong style="color:#aa5aa5;">obligatoire</strong>
+                    selon la loi sur l’accessibilité numérique.
             </div>
         </div>
-        <div class="cv-button">
+
+        <div class="cv-button" style="display: flex; gap: 15px; justify-content: center;">
+            <!-- Bouton Télécharger -->
             <a href="CV_Lola_Schmitt.pdf" download class="btn">Télécharger mon CV</a>
+
+            <!-- Bouton Visualiser -->
+            <a href="CV_Lola_Schmitt.pdf" target="_blank" class="btn">Visualiser mon CV</a>
         </div>
+
+
     </section>
 
+    <!-- Section Projets (inchangée) -->
+    <section id="nouveaux-projets">
+        <h2>Mes projets récents</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="images/projet1.png" alt="Site de Couture">
+                <h3>Site de Couture</h3>
+                <p>Création d’un site pour une association locale.</p>
+                <div class="tags"><span>HTML</span><span>CSS</span><span>PHP</span></div>
+                <a href="projets/projet1.html" class="btn-small">Voir le projet</a>
+            </div>
+
+            <div class="project-card">
+                <img src="images/projet2.png" alt="Bureau 3D">
+                <h3>Bureau 3D</h3>
+                <p>Modélisation 3D d’un espace de travail.</p>
+                <div class="tags"><span>Blender</span><span>3D</span><span>Design</span></div>
+                <a href="projets/projet2.html" class="btn-small">Voir le projet</a>
+            </div>
+
+            <div class="project-card">
+                <img src="images/projet3.png" alt="Montagne des Singes">
+                <h3>Montagne des Singes</h3>
+                <p>Création d’une peluche mascotte pour le parc.</p>
+                <div class="tags"><span>Illustrator</span><span>Design</span></div>
+                <a href="projets/projet3.html" class="btn-small">Voir le projet</a>
+            </div>
+        </div>
+    </section>
     <!-- Section Compétences -->
     <section id="competences-principales">
         <h2>Mes compétences principales</h2>
@@ -78,7 +134,7 @@
                         <img src="images/git.png" alt="Git" style="width:80px; height:80px;">
                     </div>
                     <div class="skill-card" style="background:none; box-shadow:none;">
-                        <img src="/images/plesk.png" alt="Plesk" style="width:80px; height:50px;">
+                        <img src="images/plesk.png" alt="Plesk" style="width:80px; height:50px;">
                     </div>
                     <div class="skill-card" style="background:none; box-shadow:none;">
                         <img src="images/laravel.png" alt="Laravel" style="width:70px; height:30px;">
@@ -99,68 +155,77 @@
             </div>
 
             <!-- Bloc Création -->
-            <div class="competence-block">
-                <h3>Création & Design</h3>
+            <div class="competence-block" style="background-color:#f0cbf0;">
+                <h3 style="color:#cb69ca;">Création & Design</h3>
                 <div class="skills-grid">
-                    <div class="skill-card" style="background-color:#69a7cb;">Figma</div>
-                    <div class="skill-card" style="background-color:#91cb69;">Blender</div>
-                    <div class="skill-card" style="background-color:#cb69ca;">Illustrator</div>
-                    <div class="skill-card" style="background-color:#69a7cb;">Canva</div>
-                    <div class="skill-card" style="background-color:#91cb69;">Photoshop</div>
-                    <div class="skill-card" style="background-color:#cb69ca;">After Effects</div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/figma.png" alt="Figma" style="width:70px; height:30px;">
+                    </div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/blender.png" alt="Blender" style="width:70px; height:70px;">
+                    </div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/illustrator.png" alt="Illustrator" style="width:70px; height:70px;">
+                    </div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/canva.png" alt="Canva" style="width:70px; height:70px;">
+                    </div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/photoshop.png" alt="Photoshop" style="width:70px; height:70px;">
+                    </div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/aftereffects.png" alt="After Effects" style="width:70px; height:70px;">
+                    </div>
+                    <div class="skill-card"
+                        style="background-color:rgba(255,255,255,0.3); color:white; border-radius:12px; padding:8px 16px;">
+                        UX / UI
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Bloc Stratégie -->
-            <div class="competence-block">
-                <h3>Stratégie & Communication</h3>
+
+            <!-- Bloc Stratégie & Communication -->
+            <div class="competence-block" style="background-color:#b8dbf0;">
+                <h3 style="color:#69a7cb;">Stratégie & Communication</h3>
                 <div class="skills-grid">
-                    <div class="skill-card" style="background-color:#69a7cb;">Trello</div>
-                    <div class="skill-card" style="background-color:#91cb69;">Miro</div>
-                    <div class="skill-card" style="background-color:#cb69ca;">Social Media</div>
-                    <div class="skill-card" style="background-color:#69a7cb;">Canva Projets</div>
-                    <div class="skill-card" style="background-color:#91cb69;">Gestion de projet</div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/trello.png" alt="Trello" style="width:70px; height:70px;">
+                    </div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/miro.png" alt="Miro" style="width:70px; height:70px;">
+                    </div>
+                    <div class="skill-card"
+                        style="background-color:rgba(255,255,255,0.3); color:white; border-radius:12px; padding:8px 16px;">
+                        Social Media
+                    </div>
+                    <div class="skill-card"
+                        style="background-color:rgba(255,255,255,0.3); color:white; border-radius:12px; padding:8px 16px;">
+                        Gestion de projet
+                    </div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/msproject.png" alt="Microsoft Project" style="width:70px; height:70px;">
+                    </div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/gantt.png" alt="Diagramme de Gantt" style="width:70px; height:70px;">
+                    </div>
+                    <div class="skill-card" style="background:none; box-shadow:none;">
+                        <img src="images/excel.png" alt="Excel" style="width:70px; height:70px;">
+                    </div>
                 </div>
             </div>
+
+        </div>
+
 
         </div>
 
         <a href="competences.html" class="btn">Voir plus →</a>
     </section>
-
-    <!-- Section Projets (inchangée) -->
-    <section id="nouveaux-projets">
-        <h2>Mes projets récents</h2>
-        <div class="projects">
-            <div class="project-card">
-                <img src="images/projet1.png" alt="Site de Couture">
-                <h3>Site de Couture</h3>
-                <p>Création d’un site pour une association locale.</p>
-                <div class="tags"><span>HTML</span><span>CSS</span><span>PHP</span></div>
-                <a href="projets/projet1.html" class="btn-small">Voir le projet</a>
-            </div>
-
-            <div class="project-card">
-                <img src="images/projet2.png" alt="Bureau 3D">
-                <h3>Bureau 3D</h3>
-                <p>Modélisation 3D d’un espace de travail.</p>
-                <div class="tags"><span>Blender</span><span>3D</span><span>Design</span></div>
-                <a href="projets/projet2.html" class="btn-small">Voir le projet</a>
-            </div>
-
-            <div class="project-card">
-                <img src="images/projet3.png" alt="Montagne des Singes">
-                <h3>Montagne des Singes</h3>
-                <p>Création d’une peluche mascotte pour le parc.</p>
-                <div class="tags"><span>Illustrator</span><span>Design</span></div>
-                <a href="projets/projet3.html" class="btn-small">Voir le projet</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Lola Schmitt</p>
-    </footer>
+</body>
+<footer>
+    <p>© 2025 Lola Schmitt</p>
+</footer>
 
 </body>
 
